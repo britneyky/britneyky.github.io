@@ -8,8 +8,164 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>HEY THIS IS IT!</h1> 
-    <p>this is me</p>
-    <img src="assets/images/headshot.jpg" alt="headshot">
+    <div id="header">
+        <div class="container">
+            <nav>
+                <div class="logo">Britney Ky</div>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Design & Manufacturing</a></li>
+                    <li><a href="#">Coding Projects</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>My Title</p>
+                <h1>Hi, I'm <span>Britney</span>. <br> This is my Website.</h1>
+            </div>
+        </div>
+    </div>
+
+<!-- --------------------------- About -------------------------- -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="assets/images/dummy.png" alt="placeholder">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+                        nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
+                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in 
+                        culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('education')">Education</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="education">
+                        <ul>
+                            <li><span>BLAH</span><br>elaborate on blah</li>
+                            <li><span>BLEH</span><br>elaborate on bleh</li>
+                            <li><span>BLEE</span><br>elaborate on blee</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>Haha</span><br>elaborate on haha</li>
+                            <li><span>Hehe</span><br>elaborate on hehe</li>
+                            <li><span>Huhu</span><br>elaborate on huhu</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="skills">
+                        <ul>
+                            <li><span>Bruh</span><br>elaborate on bruh</li>
+                            <li><span>Bruv</span><br>elaborate on bruv</li>
+                            <li><span>Bro</span><br>elaborate on bro</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- -------------------- Design & Manufacturing ------------------- -->
+
+    <div id="design">
+        <div class="container">
+            <h1 class="subtitle">Design and Manufacturing</h1>
+        </div>
+        <div class="project-list">
+            <div class="project">
+                <img src="assets/images/random.png" alt="placeholder">
+                <div class="layer">
+                    <h3>Project 1</h3>
+                    <p>This is a project. This is the project description</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="assets/images/random.png" alt="placeholder">
+                <div class="layer">
+                    <h3>Project 2</h3>
+                    <p>This is a project. This is the project description</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="assets/images/random.png" alt="placeholder">
+                <div class="layer">
+                    <h3>Project 3</h3>
+                    <p>This is a project. This is the project description</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+
+<!-- --------------------------- Coding Projects ------------------------- -->
+
+    <div id="code">
+        <div class="container">
+            <h1 class="subtitle">Coding Projects</h1>
+        </div>
+        <div class="project-list">
+            <div class="project">
+                <img src="assets/images/random.png" alt="placeholder">
+                <div class="layer">
+                    <h3>Project 1</h3>
+                    <p>This is a project. This is the project description</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="assets/images/random.png" alt="placeholder">
+                <div class="layer">
+                    <h3>Project 2</h3>
+                    <p>This is a project. This is the project description</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+            <div class="project">
+                <img src="assets/images/random.png" alt="placeholder">
+                <div class="layer">
+                    <h3>Project 3</h3>
+                    <p>This is a project. This is the project description</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+    
+<!-- --------------------------- Footer --------------------------- -->
+
+<div id="footer">
+    <p>contact info, etc.</p>
+</div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links"); 
+        var tabcontents = document.getElementsByClassName("tab-contents"); 
+
+        function opentab(tabname) {
+            for(tablink of tablinks) {
+                tablink.classList.remove("active-link"); 
+            }
+            for(tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab"); 
+            }
+            event.currentTarget.classList.add("active-link"); 
+            document.getElementById(tabname).classList.add("active-tab"); 
+        }
+
+    </script>
 </body>
 </html>
