@@ -1,0 +1,110 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    margin: 0px 150px; 
+    padding: 0; 
+    box-sizing: border-box;
+    background: #fff;
+    color: #1a2b1f;
+    padding-bottom: 100px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0px;
+}
+
+.header h1 {
+    font-weight: 300;
+}
+
+h2 {
+    font-weight: lighter;
+    font-size: 28px;
+}
+
+.fullscreen-video {
+    width: 100%;
+    height: auto;
+    padding-bottom: 100px;
+}
+
+.fullscreen-image {
+    width: 100%;
+    height: auto;
+    padding-bottom: 100px;
+}
+
+.btn {
+    display: block;
+    width: fit-content; 
+    border: 1px solid #7D4600; 
+    padding: 14px 50px; 
+    border-radius: 8px;
+    text-decoration: none;
+    color: #7D4600;
+    transition: background 0.5s;
+}
+
+.btn:hover {
+    background: #EFE3DA;
+    color: #7D4600;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.photo-item {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(125, 70, 0, 0.7); /* Semi-transparent background for better readability */
+    color: #fff; /* Caption text color */
+    padding: 5px 0px;
+    text-align: center;
+    opacity: 0; /* Initially hide the captions */
+    transition: opacity 0.3s ease; /* Add a smooth fade-in effect */
+}
+
+/* Show captions on hover */
+.photo-item:hover .caption {
+    opacity: 1;
+}
+
+iframe {
+    width: 100%;
+    height: 100vh;
+    padding-bottom: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        margin: 20px; 
+    }
+}

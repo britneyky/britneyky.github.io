@@ -15,7 +15,7 @@ html {
 #header {
     width: 100%;
     height: 100vh;
-    background-image: url(assets/images/arch-headshot.png);
+    background-image: url(assets/images/landing-banner.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
@@ -23,7 +23,7 @@ html {
 
 .logo {
     font-size: 44px;
-    font-weight: 400;
+    font-weight: 325;
 }
 
 .container {
@@ -35,7 +35,6 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* background-color: #fff; */
 }
 
 nav ul li {
@@ -55,7 +54,7 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #7851a9;
+    background: #7D4600;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -67,7 +66,7 @@ nav ul li a:hover::after {
 }
 
 .header-text {
-    margin-top: 20%;
+    margin-top: 15%;
     font-size: 24px;
 }
 
@@ -77,8 +76,15 @@ nav ul li a:hover::after {
     margin-top: 20px;
 }
 
+.header-text h2 {
+    font-size: 28px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
 .header-text h1 span {
-    color: #7851a9;
+    color: #7D4600;
+    font-weight: 350;
 }
 
 /* ---------------------- About ----------------------- */
@@ -100,7 +106,7 @@ nav ul li a:hover::after {
 
 .about-col-1 img {
     width: 100%;
-    border-radius: 30px;
+    border-radius: 10px;
 }
 
 .about-col-2 { 
@@ -134,7 +140,7 @@ nav ul li a:hover::after {
     content: ''; 
     width: 0;
     height: 3px;
-    background: #7851a9; 
+    background: #7D4600; 
     position: absolute; 
     left: 0; 
     bottom: -8px; 
@@ -151,8 +157,9 @@ nav ul li a:hover::after {
 }
 
 .tab-contents ul li span {
-    color: #7851a9;
+    color: #7D4600;
     font-size: 16px;
+    font-weight: bold;
 }
 
 .tab-contents {
@@ -164,7 +171,7 @@ nav ul li a:hover::after {
 }
 
 
-/* ---------------- Design & Manufacturing ----------------- */
+/* ---------------- Projects ----------------- */
 
 #design {
     padding: 50px 0px; 
@@ -179,7 +186,7 @@ nav ul li a:hover::after {
 }
 
 .project {
-    border-radius: 30px;
+    border-radius: 10px;
     position: relative;
     overflow: hidden;
 }
@@ -192,10 +199,11 @@ nav ul li a:hover::after {
 }
 
 .layer {
-    height: 0;
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.0), #7851a9);
-    border-radius: 30px;
+    height: 100%; 
+    background: #7D4600;
+    opacity: 0%;
+    border-radius: 10px;
     position: absolute;
     left: 0; 
     bottom: 0;
@@ -209,8 +217,7 @@ nav ul li a:hover::after {
     font-size: 18px;
 
     color: #fff;
-
-    transition: height 0.5s;
+    transition: opacity .5s;
 }
 
 .layer p {
@@ -227,25 +234,25 @@ nav ul li a:hover::after {
     transform: scale(1.1);
 }
 
-.project:hover .layer {
-    height: 100%; 
+.project:hover .layer { 
+    opacity: 80%;
 }
 
 .btn {
     display: block;
     margin: 50px auto;
     width: fit-content; 
-    border: 1px solid #7851a9; 
+    border: 1px solid #EFE3DA; 
     padding: 14px 50px; 
     border-radius: 8px;
     text-decoration: none;
-    color: #7851a9;
+    color: #EFE3DA;
     transition: background 0.5s;
 }
 
 .btn:hover {
-    background: #7851a9;
-    color: #fff;
+    background: #EFE3DA;
+    color: #7D4600;
 }
 
 #code {
@@ -253,25 +260,25 @@ nav ul li a:hover::after {
 }
 
 
-
-/* ------------------------------- footer ------------------------------ */
-#footer {
+/* ------------------------------- contact ------------------------------ */
+#contact {
     padding: 50px 0px; 
+    background-color: #EFE3DA;
 }
 
-#footer .container {
+#contact .container {
     flex-basis: 35%;
 }
 
-#footer .container .info a {
+#contact .container .info a {
     text-decoration: none;
     color: #1a2b1f
 }
 
-#footer .container .info p i{
+#contact .container .info p i{
     margin-right: 15px;
     font-size: 18px;
-    color: #7851a9
+    color: #7D4600
 }
 
 /* ---------------------------- css for smaller ---------------------- */
@@ -282,7 +289,7 @@ nav .fa-solid {
 
 @media only screen and (max-width: 600px) {
     #header {
-        background-image: url(assets/images/arch-headshot.png);
+        background-image: url(assets/images/background\ headshot\ phone.png);
     }
 
     .header-text {
@@ -299,7 +306,7 @@ nav .fa-solid {
     }
 
     nav ul {
-        background: #7851a9;
+        background: #7D4600;
         position: fixed;
         top: -20px;
         right: -300px;
