@@ -234,8 +234,7 @@ nav ul li a:hover::after {
     transform: scale(1.1);
 }
 
-.project:hover .layer {
-    
+.project:hover .layer { 
     opacity: 80%;
 }
 
@@ -259,7 +258,6 @@ nav ul li a:hover::after {
 #code {
     padding: 50px 0px; 
 }
-
 
 
 /* ------------------------------- contact ------------------------------ */
