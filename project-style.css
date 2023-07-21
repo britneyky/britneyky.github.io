@@ -26,7 +26,7 @@ html {
 
 h2 {
     font-weight: lighter;
-    font-size: 28px;
+    font-size: 26px;
 }
 
 .fullscreen-video {
@@ -86,21 +86,36 @@ h2 {
     width: 100%;
     background-color: rgba(125, 70, 0, 0.7); /* Semi-transparent background for better readability */
     color: #fff; /* Caption text color */
-    padding: 5px 0px;
+    padding: 20px 10px;
     text-align: center;
     opacity: 0; /* Initially hide the captions */
     transition: opacity 0.3s ease; /* Add a smooth fade-in effect */
+    box-sizing: border-box;
 }
 
 /* Show captions on hover */
 .photo-item:hover .caption {
     opacity: 1;
+    padding: 20px 10px;
+    box-sizing: border-box;
 }
 
 iframe {
     width: 100%;
     height: 100vh;
-    padding-bottom: 100px;
+    margin-bottom: 100px;
+}
+
+.label {
+    font-weight: bold;
+}
+
+p {
+    font-size: 18px;
+}
+
+.info {
+    margin-bottom: 50px;
 }
 
 @media only screen and (max-width: 600px) {
