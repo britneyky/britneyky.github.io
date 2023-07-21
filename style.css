@@ -8,10 +8,14 @@ body {
     color: #1a2b1f;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 #header {
     width: 100%;
     height: 100vh;
-    background-image: url(assets/images/arch-headshot.png);
+    background-image: url(assets/images/landing-banner.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right;
@@ -19,7 +23,7 @@ body {
 
 .logo {
     font-size: 44px;
-    font-weight: 400;
+    font-weight: 325;
 }
 
 .container {
@@ -31,7 +35,6 @@ nav {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    /* background-color: #fff; */
 }
 
 nav ul li {
@@ -51,7 +54,7 @@ nav ul li a::after {
     content: '';
     width: 0;
     height: 3px;
-    background: #7851a9;
+    background: #7D4600;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -63,7 +66,7 @@ nav ul li a:hover::after {
 }
 
 .header-text {
-    margin-top: 20%;
+    margin-top: 15%;
     font-size: 24px;
 }
 
@@ -73,8 +76,15 @@ nav ul li a:hover::after {
     margin-top: 20px;
 }
 
+.header-text h2 {
+    font-size: 28px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
 .header-text h1 span {
-    color: #7851a9;
+    color: #7D4600;
+    font-weight: 350;
 }
 
 /* ---------------------- About ----------------------- */
@@ -96,7 +106,7 @@ nav ul li a:hover::after {
 
 .about-col-1 img {
     width: 100%;
-    border-radius: 30px;
+    border-radius: 10px;
 }
 
 .about-col-2 { 
@@ -130,7 +140,7 @@ nav ul li a:hover::after {
     content: ''; 
     width: 0;
     height: 3px;
-    background: #7851a9; 
+    background: #7D4600; 
     position: absolute; 
     left: 0; 
     bottom: -8px; 
@@ -147,8 +157,9 @@ nav ul li a:hover::after {
 }
 
 .tab-contents ul li span {
-    color: #7851a9;
+    color: #7D4600;
     font-size: 16px;
+    font-weight: bold;
 }
 
 .tab-contents {
@@ -160,7 +171,7 @@ nav ul li a:hover::after {
 }
 
 
-/* ---------------- Design & Manufacturing ----------------- */
+/* ---------------- Projects ----------------- */
 
 #design {
     padding: 50px 0px; 
@@ -175,7 +186,7 @@ nav ul li a:hover::after {
 }
 
 .project {
-    border-radius: 30px;
+    border-radius: 10px;
     position: relative;
     overflow: hidden;
 }
@@ -188,10 +199,11 @@ nav ul li a:hover::after {
 }
 
 .layer {
-    height: 0;
     width: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.0), #7851a9);
-    border-radius: 30px;
+    height: 100%; 
+    background: #7D4600;
+    opacity: 0%;
+    border-radius: 10px;
     position: absolute;
     left: 0; 
     bottom: 0;
@@ -205,8 +217,7 @@ nav ul li a:hover::after {
     font-size: 18px;
 
     color: #fff;
-
-    transition: height 0.5s;
+    transition: opacity .5s;
 }
 
 .layer p {
@@ -224,32 +235,119 @@ nav ul li a:hover::after {
 }
 
 .project:hover .layer {
-    height: 100%; 
+    
+    opacity: 80%;
 }
 
 .btn {
     display: block;
     margin: 50px auto;
     width: fit-content; 
-    border: 1px solid #7851a9; 
+    border: 1px solid #EFE3DA; 
     padding: 14px 50px; 
     border-radius: 8px;
     text-decoration: none;
-    color: #7851a9;
+    color: #EFE3DA;
     transition: background 0.5s;
 }
 
 .btn:hover {
-    background: #7851a9;
-    color: #fff;
+    background: #EFE3DA;
+    color: #7D4600;
 }
 
 #code {
     padding: 50px 0px; 
 }
 
-#footer {
-    width: 100%;
-    text-align: center;
-    padding: 25px 0px; 
+
+
+/* ------------------------------- contact ------------------------------ */
+#contact {
+    padding: 50px 0px; 
+    background-color: #EFE3DA;
+}
+
+#contact .container {
+    flex-basis: 35%;
+}
+
+#contact .container .info a {
+    text-decoration: none;
+    color: #1a2b1f
+}
+
+#contact .container .info p i{
+    margin-right: 15px;
+    font-size: 18px;
+    color: #7D4600
+}
+
+/* ---------------------------- css for smaller ---------------------- */
+
+nav .fa-solid {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: url(assets/images/background\ headshot\ phone.png);
+    }
+
+    .header-text {
+        margin-top: 10%;
+        font-size: 24px;
+    }
+
+    .header-text h1 {
+        font-size: 20px;
+    }
+
+    nav .fa-solid {
+        display: block;
+    }
+
+    nav ul {
+        background: #7D4600;
+        position: fixed;
+        top: -20px;
+        right: -300px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.45s;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 25px -15px;
+    }
+
+    nav ul .fa-solid {
+        position:absolute; 
+        top: 25px;
+        left: 25px; 
+        cursor: pointer;
+    }
+    
+    .subtitle {
+        font-size: 26px;
+    }
+
+    .about-col-1, .about-col-2 {
+        flex-basis: 100%;
+    }
+
+    .about-col-1 {
+        margin-bottom: 30px;
+    }
+
+    .about-col-2 {
+        font-size: 14px;
+    }
+
+    .tab-links {
+        margin-right: 20px;
+    }
 }
