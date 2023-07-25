@@ -114,6 +114,10 @@ p {
     font-size: 18px;
 }
 
+ul li {
+    font-size: 18px;
+}
+
 .info {
     margin-bottom: 50px;
 }
