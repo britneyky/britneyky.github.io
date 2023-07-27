@@ -14,20 +14,102 @@
             <a href="britneyky.github.io/#code" class="btn">Back</a>
         </div>
         <div class="info">
-            <p><span class="label">Course:</span> </p>
+            <p><span class="label">Course:</span> CS194: Software Project Experience </p>
             <p><span class="label">Timeline:</span> 8 Weeks</p>
-            <p><span class="label">Skills:</span> </p>
-            <p><span class="label">About:</span> </p>
+            <p><span class="label">Skills:</span> Project Management, User Interviews, JavaScript, CSS</p>
+            <p><span class="label">Role:</span> Front-End Developer, Project Manager 
+                <br> <br>
+                My teammate and I developed the 
+                website, while 3 other teammates worked on the backend and mobile app. As my contributions were primarily to 
+                user research, project management, and front-end development, I focus mainly on these aspects in the following
+                project summary. </p>
         </div>
-        <h2>Report:</h2>
-        <iframe src="assets/materials/ME104 Robot Report.pdf"></iframe>
-        <h2>Video:</h2>
-        <video class="fullscreen-video" controls>
-            <source src="assets/materials/robot video.mp4">
-            Your browser does not support the video tag.
-        </video>
-        <h2>CAD Assembly:</h2>
-        <p><a href="https://stanford411.autodesk360.com/g/shares/SH35dfcQT936092f0e43164e2e9ffedf6ee9"> Click to view robot</a> (Fusion360 Model) </p>
+        <img class="fullscreen-image" src="assets/images/project details/5sure-landing.png" alt="test">
+        <h2 style="padding-top: 0px;" >What is 5-SURE?</h2>
+        <p> 5-Sure Safe Rides, colloquially known as 5-SURE, is a phone call operated campus safety program that provides free transportation around Stanford's campus nearly every night from 5:00 pm - 2:00 am. 
+            <br><br> 
+            <b>Basically, 5-SURE is Stanford's free Uber.</b>
+         </p>
+         <h2>The Problem:</h2>
+         <p>The problem is two-fold:</p>
+         <div class="project-container">
+            <p>
+                <b>Student Passengers: </b> 
+                <br>
+                Currently, students must manually dial the 5-Sure phone number to speak to an operator. There is little transparency 
+                in scheduling these rides; students often have to wait on hold, be called back multiple times, and may struggle to find 
+                the exact location their driver is at.
+            </p>
+            <p> 
+                <b>5-SURE Employees: </b> 
+                <br>
+                On the dispatch end, operators communicate via juggling phone calls, text messages, and walkie-talkies. During busy nights, 
+                this process is extremely taxing to manage. Additionally,  some drivers are concerned with accuracy and safety; with a phone call system, 
+                they are unsure if the strangers approaching them are the correct passengers.             
+             </p>
+         </div>
+         <h2>Solution:</h2>
+         <p>
+            Thus, with 5-SURE's permission, we sought to develop an app for students to request rides with, eliminating the need for phone calls.
+            This would ease the barrier to access for students, as well as streamline the ride dispatch process for 5-SURE employees. 
+            
+            After initial interviews with employees, we also developed an accompanying website for the 5-SURE operators to use. 
+        </p>
+        <h2>User Interviews:</h2>
+        <p>I interviewed two 5-SURE employees, the student manager and a dispatch operator, as well as three students, regular users of 5-SURE.
+            As a student, I was familiar with many of the users' painpoints, but the 
+        </p>
+        <div class="project-container">
+            <div class="project-item">
+                <p><b>Student Passengers: </b></p>
+                <ul>
+                    <li>phone calls are annoying, especially in a loud environment like a party or when they don't feel safe </li>
+                    <li>lack of updates</li>
+                    <li>No time estimation</li>
+                </ul>
+            </div>
+            <div class="project-item">
+                <p><b>5-SURE Employees: </b></p>
+                <ul>
+                    <li>job security. 5-SURE operators manually handle all aspects of ride dispatch (maintaining queue, assigning rides, phone calls, etc.)</li>
+                    <li>location mix ups</li>
+                    <li>5-SURE prefers that drivers not have the app to stay off their phone as it is a safety issue. They would rather the dispatcher relay communication.</li>
+                    <li>late nights... picking up strangers</li>
+                </ul>
+            </div>
+         </div>
+        <h2>Prototyping and User Tests:</h2>
+        <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTytX-bVtmWlCh6MqyrKFKgFWzzRyOHQ4qSrlUqAoN46igPSVA0P_SocBEPvnT9ikjyMVOzfTLIeYLC/embed?start=false&loop=true&delayms=30000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+        <h2 style="padding-top: 0px;" >Key Findings:</h2>
+        <p>
+            <ul>
+                <li> Minimize amount of clicks on dispatch</li>
+                <li> Finalize informaiton is displayed</li>
+                <li> Phone app was straightforward to use as there are minimal interactions</li>
+            </ul>
+        </p>
+        
+        <h2>Final Website:</h2>
+        <p>Through our findings from user interviews and user tests, we identified three key flows a 5-SURE dispatch operater would undergo
+            to complete their work, viewing driver information, viewing the queue to assign and complete rides, and viewing the rides currently 
+            in progress. My partner and I worked with the backend team to define API touchpoints with their database hosted by Postico such that
+            we could pull the relevant information. </p>
+        <h3>Driver Info:</h3>
+        <img class="fullscreen-image" src="assets/images/project details/5sure-driver.png" alt="test">
+        <h3>Queue:</h3>
+        <img class="fullscreen-image" src="assets/images/project details/5sure-queue.png" alt="test">
+        <h3>In Progress Rides:</h3>
+        <img class="fullscreen-image" src="assets/images/project details/5sure-progress.png" alt="test">
+        <h2 style="padding-top: 0px;">Code:</h2>
+        <p><a href="https://github.com/britneyky/CS194/tree/main/components" target="_blank" rel="noopener noreferrer"> Click to view website code</a> </p>
+        <h2>For Future Consideration:</h2>
+        <p> limited due to our project and course timeline constraints as well as University resources to fully launch. 
+            <ul>
+                <li>Entered in information to the database, but if this were integrated with Stanford's system, could pull identifying infromation linked to login credentials</li>
+                <li>Better time estimations, whether that be through equiping cars with location capabilities or collecting longterm data to derive a more accurate algorithm</li>
+            </ul>
+            </ul>
+        </p>
     </div>
 </body>
 </html>
