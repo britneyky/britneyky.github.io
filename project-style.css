@@ -27,6 +27,7 @@ html {
 h2 {
     font-weight: lighter;
     font-size: 26px;
+    padding-top: 100px;
 }
 
 .fullscreen-video {
@@ -121,6 +122,14 @@ ul li {
 .info {
     margin-bottom: 50px;
 }
+
+.project-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns with equal width */
+    gap: 50px;
+  }
+
+
 
 @media only screen and (max-width: 600px) {
     body {
