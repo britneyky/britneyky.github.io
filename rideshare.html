@@ -16,7 +16,7 @@
         <div class="info">
             <p><span class="label">Course:</span> CS194: Software Project Experience </p>
             <p><span class="label">Timeline:</span> 8 Weeks</p>
-            <p><span class="label">Skills:</span> Project Management, User Interviews, JavaScript, CSS</p>
+            <p><span class="label">Skills:</span> Project Management, User Interviews, React JSX, CSS</p>
             <p><span class="label">Role:</span> Front-End Developer, Project Manager 
                 <br> <br>
                 My teammate and I developed the 
@@ -53,60 +53,63 @@
             Thus, with 5-SURE's permission, we sought to develop an app for students to request rides with, eliminating the need for phone calls.
             This would ease the barrier to access for students, as well as streamline the ride dispatch process for 5-SURE employees. 
             
-            After initial interviews with employees, we also developed an accompanying website for the 5-SURE operators to use. 
+            After initial needfinding with employees, we also developed an accompanying website for the 5-SURE operators to use. 
         </p>
         <h2>User Interviews:</h2>
         <p>I interviewed two 5-SURE employees, the student manager and a dispatch operator, as well as three students, regular users of 5-SURE.
-            As a student, I was familiar with many of the users' painpoints, but the 
+            As a student, I was familiar with many of the users' painpoints, but the information we gleaned from the 5-SURE employees was essential to understanding
+            how to best support their needs.
         </p>
         <div class="project-container">
             <div class="project-item">
-                <p><b>Student Passengers: </b></p>
+                <p><b>Student Passengers... </b></p>
                 <ul>
-                    <li>phone calls are annoying, especially in a loud environment like a party or when they don't feel safe </li>
-                    <li>lack of updates</li>
-                    <li>No time estimation</li>
+                    <li>Found phone calls to be annoying, especially in a loud environment like a party</li>
+                    <li>Were frustrated by the lack of updates on their ride requests</li>
+                    <li>Wanted more transparency on wait times, especially on busy weekend nights</li>
                 </ul>
             </div>
             <div class="project-item">
-                <p><b>5-SURE Employees: </b></p>
+                <p><b>5-SURE Employees... </b></p>
                 <ul>
-                    <li>job security. 5-SURE operators manually handle all aspects of ride dispatch (maintaining queue, assigning rides, phone calls, etc.)</li>
-                    <li>location mix ups</li>
-                    <li>5-SURE prefers that drivers not have the app to stay off their phone as it is a safety issue. They would rather the dispatcher relay communication.</li>
-                    <li>late nights... picking up strangers</li>
+                    <li>Feared that dispatch automation would affect job security; 5-SURE operators manage all ride requests and manually assign them to 2-3 drivers, allowing more students to be employed. </li>
+                    <li>Prefers that drivers stay off their phone to maintain safety. Thus, the dispatcher must relay communication via walkie-talkies.</li>
+                    <li>Felt discomfort approaching strangers late at night, as they only know the name and location of a passenger</li>
                 </ul>
             </div>
          </div>
-        <h2>Prototyping and User Tests:</h2>
+        <h2 >Prototyping and User Tests:</h2>
+        <p>We conducted user tests with 4 individuals, a low-fi paper prototype and medium-fi Figma prototype for the rider and 5-SURE dispatch: </p>
         <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTytX-bVtmWlCh6MqyrKFKgFWzzRyOHQ4qSrlUqAoN46igPSVA0P_SocBEPvnT9ikjyMVOzfTLIeYLC/embed?start=false&loop=true&delayms=30000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-        <h2 style="padding-top: 0px;" >Key Findings:</h2>
-        <p>
-            <ul>
-                <li> Minimize amount of clicks on dispatch</li>
-                <li> Finalize informaiton is displayed</li>
-                <li> Phone app was straightforward to use as there are minimal interactions</li>
-            </ul>
-        </p>
-        
-        <h2>Final Website:</h2>
+        <h2 style="padding-top: 0px;" >Final Website:</h2>
         <p>Through our findings from user interviews and user tests, we identified three key flows a 5-SURE dispatch operater would undergo
             to complete their work, viewing driver information, viewing the queue to assign and complete rides, and viewing the rides currently 
             in progress. My partner and I worked with the backend team to define API touchpoints with their database hosted by Postico such that
-            we could pull the relevant information. </p>
+            we could pull the relevant information. Information would be posted to our database via ride requests from the app. </p>
         <h3>Driver Info:</h3>
-        <img class="fullscreen-image" src="assets/images/project details/5sure-driver.png" alt="test">
+        <img class="fullscreen-image" style="padding-bottom: 0px;" src="assets/images/project details/5sure-driver.png" alt="test">
+        <p style="padding-bottom: 50px;">Here, a dispatch operater could see all the information of the drivers on shift for the night, and contact information in case of emergencies</p>
         <h3>Queue:</h3>
-        <img class="fullscreen-image" src="assets/images/project details/5sure-queue.png" alt="test">
+        <img class="fullscreen-image" style="padding-bottom: 0px;" src="assets/images/project details/5sure-queue.png" alt="test">
+        <p style="padding-bottom: 50px;">In this flow, dispatch can see the queue, view the rider's information, and assign a ride to an available driver. Only drivers
+        not currently assigned to a passenger will appear to guard against errors. The queue is ordered by time to facilitate their FIFO fulfillment practice.</p>
         <h3>In Progress Rides:</h3>
-        <img class="fullscreen-image" src="assets/images/project details/5sure-progress.png" alt="test">
+        <img class="fullscreen-image" style="padding-bottom: 0px;" src="assets/images/project details/5sure-progress.png" alt="test">
+        <p style="padding-bottom: 100px;">Dispatch operators may come to this flow to view the rides currently assigned to drivers. When the drivers update their progress via 
+        walkie-talkies, dispatch can mark the driver as "arrived" or "completed" to send an update to the rider's app or become available for another ride.
+        Confirmation pop-up screens prevent against accidental clicks.</p>
+        
         <h2 style="padding-top: 0px;">Code:</h2>
         <p><a href="https://github.com/britneyky/CS194/tree/main/components" target="_blank" rel="noopener noreferrer"> Click to view website code</a> </p>
-        <h2>For Future Consideration:</h2>
-        <p> limited due to our project and course timeline constraints as well as University resources to fully launch. 
+        
+        <h2>Future Considerations:</h2>
+        <p> Many of our project's features were limited due to class time constraints and 5-SURE's resources. 
+            For example, we would have liked to include location based time estimates, but the cars were not equipped with location 
+            capabilities and driver's were not supposed to be on their phones. Given more time and resources, we could consider:
             <ul>
-                <li>Entered in information to the database, but if this were integrated with Stanford's system, could pull identifying infromation linked to login credentials</li>
-                <li>Better time estimations, whether that be through equiping cars with location capabilities or collecting longterm data to derive a more accurate algorithm</li>
+                <li>Integrating with Stanford's IT, which could pull student's identifying information linked to login credentials rather than having dispatch manually input</li>
+                <li>Developed better time estimations, whether that be through equiping cars with location capabilities or collecting longterm data to derive a more accurate algorithm</li>
+                <li>Automating ride assigments, allowing those who would be in the dispatch role to be a driver if their were more cars available</li>
             </ul>
             </ul>
         </p>
